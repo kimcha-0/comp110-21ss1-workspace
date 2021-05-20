@@ -1,6 +1,6 @@
 """Hype Machine program."""
 
-__author__ = "730407570"
+__author__: str = "730407570"
 
 # Your solution starts here...
 name: str = input("What is your name? ")
