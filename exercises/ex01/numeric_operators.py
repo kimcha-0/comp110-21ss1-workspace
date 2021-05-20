@@ -1,6 +1,6 @@
 """Exercise 1, numberic operators."""
 
-__author__: str = "730407570"
+__author__ = "730407570"
 
 # Your solution starts here...
 left: str = input("Left hand side: ")
