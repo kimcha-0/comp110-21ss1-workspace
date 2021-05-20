@@ -1,6 +1,6 @@
 """A vaccination calculator."""
 
-__author__ = "YOUR PID HERE"
+__author__: str = "730407570"
 
 # The datetime data type is imported from the datetime library.
 # A datetime object models a specific date and time.
