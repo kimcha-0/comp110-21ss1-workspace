@@ -3,10 +3,10 @@
 __author__: str = "730407570"
 
 # Your solution starts here...
-left: str = input("Left hand side: ")
-right: str = input("Right hand side: ")
+left_num: str = input("Left hand side: ")
+right_num: str = input("Right hand side: ")
 
-print(left + " ** " + right + " is " + str(int(left) ** int(right)))
-print(left + " / " + right + " is " + str(int(left) / int(right)))
-print(left + " // " + right + " is " + str(int(left) // int(right)))
-print(left + " % " + right + " is " + str(int(left) % int(right)))
+print(left_num + " ** " + right_num + " is " + str(int(left_num) ** int(right_num)))
+print(left_num + " / " + right_num + " is " + str(int(left_num) / int(right_num)))
+print(left_num + " // " + right_num + " is " + str(int(left_num) // int(right_num)))
+print(left_num + " % " + right_num + " is " + str(int(left_num) % int(right_num)))
