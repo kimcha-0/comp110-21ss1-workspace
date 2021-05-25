@@ -22,8 +22,9 @@ if fortune == 1:
 else:
     if fortune == 2:
         print("Great trouble is ahead, but you will persevere.")
-    if fortune == 3: 
-        print("You will meet a lifelong friend.")
+    else:
+        if fortune == 3: 
+            print("You will meet a lifelong friend.")
     else: 
         print("You will a fun and productive summer.")
 
