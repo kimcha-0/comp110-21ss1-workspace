@@ -25,7 +25,7 @@ else:
     else:
         if fortune == 3: 
             print("You will meet a lifelong friend.")
-    else: 
-        print("You will a fun and productive summer.")
+        else:
+            print("You will a fun and productive summer.")
 
 print("Now, go spread positive vibes!")
