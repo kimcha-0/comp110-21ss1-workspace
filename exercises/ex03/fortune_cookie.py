@@ -27,4 +27,4 @@ else:
     if fortune == 4: 
         print("You will a fun and productive summer.")
 
-print("Now, you will go spread positive vibes!")
+print("Now, go spread positive vibes!")
