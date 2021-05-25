@@ -15,7 +15,16 @@ from random import randint
 # Begin your solution here...
 print("Your fortune cookie says...")
 
-fortune: int = randint(1,3)
+fortune: int = randint(1,4)
 
 if fortune == 1:
-    print()
+    print("You will have a long and prosperous life.")
+else:
+    if fortune == 2:
+        print("Great trouble is ahead, but you will persevere.")
+    if fortune == 3: 
+        print("You will meet a lifelong friend.")
+    if fortune == 4: 
+        print("You will a fun and productive summer.")
+
+print("Now, you will go spread positive vibes!")
