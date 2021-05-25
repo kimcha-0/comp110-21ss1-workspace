@@ -4,3 +4,4 @@ __author__ = "730407570"
 
 
 # Begin your solution here...
+number: int = int(input("Choose a number: "))
