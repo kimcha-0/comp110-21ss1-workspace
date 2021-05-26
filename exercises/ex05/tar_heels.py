@@ -15,6 +15,7 @@ def main() -> None:
 
 
 def tar_heels(response: int) -> str:
+    """Returns a string after testing if an integer is divisible by 2 and/or 7."""
     if response % 2 == 0 and response % 7 != 0:
         return "TAR"
     if response % 7 == 0 and response % 2 != 0:
