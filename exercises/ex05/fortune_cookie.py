@@ -14,7 +14,7 @@ def main() -> None:
     return None
 
 # TODO 1: Define your fortune_cookie function here.
-def fortune_cookie():
+def fortune_cookie() -> str:
     fortune: int = randint(1,4)
     if fortune == 1:
         return "You will have a long and prosperous life."
