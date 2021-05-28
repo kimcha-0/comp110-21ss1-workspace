@@ -9,9 +9,15 @@ def main() -> None:
     print("The abbreviation is " + abbreviate(word))
     return None
 
-# TODO 1: Define the abbreviate function, and its logic, here.
-def abbreviate(x: str) -> str:
-    return str(x)
+# TODO 1: Define the abbreviate function, and its logic, here. 
+def abbreviate(x: str) -> str: 
+    i = 0
+    abbreviation: str = ""
+    while i < len(x):
+        if x[i].isupper():
+            abbreviation += x[i]
+        i += 1
+    return abbreviation
 
 
 if __name__ == "__main__":
