@@ -1,6 +1,24 @@
 """A number guessing game."""
 from random import randint
 
+def main() -> None:
+    """Entrypoint of the program and starts the game.""" 
+    greet()
+    points: int = 0
+    print("Now, you have three options: Exit, Play, Play a different game")
+    choice: str = input("What do you choose? ")
+    if choice == "Exit" or "exit":
+        print(f"Thanks for checking us out, we hope you come back again. Points: {points}")
+    elif choice == "Play" or "play":
+        print(f"Let's begin. Points: {points}")
+        game()
+    else:
+        print(f"Let's play! Points: {points}")
+        other_game()
+
+    return None
+
+
 def greet() -> None:
     print("Welcome to guess the number! A game where you, the user, guesses a number!")
     player: str = input("What is your name? ")
@@ -19,24 +37,7 @@ def game() -> int:
 
 def other_game(x: int) -> int:
     return x
-
-def main() -> None:
-    """Entrypoint of the program and starts the game.""" 
-    greet()
-    points: int = 0
-    print("Now, you have three options: Exit, Play, Play a different game")
-    choice: str = input("What do you choose? ")
-    if choice == "Exit" or "exit":
-        print(f"Thanks for checking us out, we hope you come back again. Points: {points}")
-    elif choice == "Play" or "play":
-        print(f"Let's begin. Points: {points}")
-        game()
-    else:
-        print(f"Let's play! Points: {points}")
-        other_game()
-
-    return None
-
+    
 
 if __name__ == "__main__":
     """Calls the main function."""
