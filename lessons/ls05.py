@@ -1,11 +1,12 @@
-"""Relative reassignment."""
+"""looping example."""
 
-a: int = 3
-b: str = "<"
-iterations: int = 0
-while iterations < 3:
-    b+= str(a)
-    print(b)
-    iterations += 1
+i: int = 1
+j: int = 0
+s: str = ""
 
-print("loop done!")
+while i < 4:
+    j = i + j
+    s = s + str(i) + str(j)
+    i +=1
+
+print (s)
