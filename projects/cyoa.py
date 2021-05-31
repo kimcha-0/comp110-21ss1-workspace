@@ -14,21 +14,24 @@ def main() -> None:
     option: int = int(input("Type in your choice (0, 1, 2): "))
     is_playing: bool = True
     if option == 0:
-        print(f"Thanks for checking us out. We hope to see you again. Points: {points}")
+        print(f"Thanks for checking us out. We hope to see you again. You accrued a total of {points} points. Great job!")
     
     elif option == 1:
         print(f"Let's begin. Points: {points}")
         while is_playing: 
             game()
             play_again: str = input("Play again? yes/no ")
+            points += 10
             if play_again == "no":
                 is_playing = False
-        print(f"Thanks for checking us out. We hope to see you again. Points: {points}")
+            
+        print(f"Thanks for checking us out. We hope to see you again. You accured a total of {points} points. Great job!")
     else:
         print(f"Let's begin. Points: {points}")
         while is_playing:
             other_game()
             play_again: str = input("Play again? yes/no ")
+            points += 10
             if play_again == "no":
                 is_playing = False
         print(f"Thanks for checking us out. We hope to see you again. Points: {points}")
@@ -38,21 +41,44 @@ def greet() -> None:
     print("Welcome to guess the number! A game where you, the user, guesses a number!")
     player: str = input("What is your name? ")
     ver_1: str = "In version one, you guess a number between 1-10."
-    ver_2: str = "In version two, you guess a number between 1-100!"
+    ver_2: str = "In version two, you guess a number between 1-20!"
     print(f"{player}, there are two versions for you to play.")
     print(f"{ver_1} {ver_2}")
     return None
 
 
-def game() -> int:
+def game() -> None:
     """Generates a random integer 1-10. If player is correct, add 10 points."""
+    attempts: int = 1
+    i = 10
     answer: int = randint(1,10)
-    attempt: int = int(input("Take a guess: "))
-
-
-def other_game(x: int) -> int:
-    return x
     
+    while attempts < i:
+        user_guess: int = int(input("Take a guess: "))
+        if user_guess != answer:
+            print("Incorrect. Try again.")
+            attempts += 1
+        else: 
+            print(f"Correct you guessed the correct number in {attempts} attempts and you receive 10 points.")
+            break
+            
+    return None
+
+
+def other_game() -> None:
+    attempts: int = 1
+    i = 20
+    answer: int = randint(1,20)
+
+    while attempts < i:
+        user_guess: int = int(input("Take a guess: "))
+        if user_guess != answer: 
+            print("Incorrect. Try again.")
+            attempts += 1
+        else:
+            print(f"Correct you guessed the correct number in {attempts} attempts and you receive 10 points.")
+            break
+    return None
 
 if __name__ == "__main__":
     main()
