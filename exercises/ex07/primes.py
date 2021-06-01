@@ -11,6 +11,7 @@ def main() -> None:
 
 # TODO 1: Define the is_prime function, and its logic, here.
 def is_prime(a: int) -> bool:
+    
     return True
 # TODO 2: Define the list_primes function, and its logic, here.
 
