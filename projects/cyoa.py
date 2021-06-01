@@ -9,7 +9,7 @@ player: str = ""
 def main() -> None:
     """Entrypoint of the program and starts the game.""" 
     points: int = 0
-    greet()
+    greet(points)
     print("Now, you have three options: Exit (type 0), Play version 1 (type 1), Play version 2 (type 2)")
     option: int = int(input("Type in your choice (0, 1, 2): "))
     is_playing: bool = True
@@ -47,8 +47,9 @@ def greet() -> None:
     return None
 
 
-def game() -> None:
-    """Generates a random integer 1-10. If player is correct, add 10 points."""
+def game(a: int) -> int::
+    """Generates a random integer 1-10. If player is correct, add 10 points. 
+    Returns the final point value to the function."""
     attempts: int = 1
     i = 10
     answer: int = randint(1,10)
