@@ -5,5 +5,6 @@ def sum(xs: list[int]) -> int:
     total: int = 0
     i: int = 0
     while i < len(xs):
-        total += i
+        total += xs[i]
+        i += 1
     return total
