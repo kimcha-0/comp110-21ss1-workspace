@@ -8,6 +8,7 @@ def main() -> None:
     # TODO 2: Test your function here
     return None
 
+
 # TODO 1: Define the over_21 function, and its logic, here.
 def over_21(names: dict[str, int]) -> list[str]:
     """Takes a dictionary with names with their corresponding ages and returns a list with the people
