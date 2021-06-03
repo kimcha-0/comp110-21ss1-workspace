@@ -6,18 +6,19 @@ __author__ = "730407570"
 def main() -> None:
     """The entrypoint of the program, when run as a module."""
     # TODO 2: Test your function here
+    s: dict[str, int] = {"David": 20, "Sahil": 21}
+    print(over_21(s))
     return None
 
 
 # TODO 1: Define the over_21 function, and its logic, here.
-def over_21(names: dict[str, int]) -> list[str]:
-    """Takes a dictionary with names with their corresponding ages and returns a list with the people
-    with ages over 21."""
-    results: list[str] = []
-    for age in names:
-        if names[age] > 21:
-            results.append(age)
-    return results
+def over_21(x: dict[str, int]) -> list[str]:
+    over_21_names: list[str] = []
+    for i in x:
+        if x[i] >= 21:
+            over_21_names.append(i)
+    return over_21_names
+        
 
 if __name__ == "__main__":
     main()
