@@ -33,6 +33,7 @@ def favorite_color(x: dict[str, str]) -> str:
     for i in frequency_table:
         if frequency_table[i] == max_color_value:
             return i
+    return i
 
 if __name__ == "__main__":
     main()
