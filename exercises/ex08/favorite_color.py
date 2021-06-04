@@ -3,19 +3,15 @@
 __author__ = "730407570"
 
 
-from typing import ItemsView
-
-
 def main() -> None:
     """The entrypoint of the program, when run as a module."""
     # TODO 2: Test your functions here
-    s: dict[str, str] = {"Max": "blue", "David": "yellow", "Sahil": "red", "Abhi": "blue", "Kaylan": "yellow", "Suraj": "yellow"}
-    print(favorite_color(s))
     return None
 
 
 # TODO 1: Define the favorite_color function, and its logic, here.
 def favorite_color(x: dict[str, str]) -> str:
+    """Takes a dictionary input and returns the color whose is frequency is highest."""
     frequency_table: dict[str, int] = {}
     for i in x:
         if x[i] in frequency_table:
@@ -34,6 +30,7 @@ def favorite_color(x: dict[str, str]) -> str:
         if frequency_table[i] == max_color_value:
             return i
     return i
+
 
 if __name__ == "__main__":
     main()
