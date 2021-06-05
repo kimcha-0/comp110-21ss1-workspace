@@ -33,3 +33,28 @@ def passes(students: dict[str, float]) -> list[str]:
 
 s: dict[str, float] = {"Andrew": 100.0, "Shaurik": 89.0, "Claire": 40.0}
 print(passes(s))
+
+teachers_pet: list[str] = ["Claire", "Jasper"]
+
+for pet in teachers_pet:
+    # initialize or increment
+    if pet in s:
+        # increment since the pet key is valid, and exists in the s dictionary
+        s[pet] += 50.0
+    else:
+        # initializing bc the key is not in the dicionary
+        s[pet] = 65.0
+
+frequency_table: dict[str, int] = {}
+# for each color in input dictionary
+# if the color is already in the table, increment its value
+# if not, initialize it
+
+def max_algo(xs: list[int]) -> int:
+    
+    # make the assumption that the list is not empty
+    result: int = xs[0]
+    for item in xs:
+        if item > result:
+            result = item
+    return result
