@@ -1,7 +1,8 @@
 """Data utility functions."""
 
-__author__ = "YOUR 9-DIGIT PID"
+__author__ = "730407570"
 
+from csv import DictReader
 
 #TODO 0: Paste the functions we've been working on in class, here.
 def read_csv_rows(path: str) -> list[dict[str, str]]:
@@ -39,6 +40,7 @@ def head(table: dict[str, list[str]], rows: int) -> dict[str, list[str]]:
     for key in table:
         result[key] = table[key][:rows]
     return result
+
 
 def select(table: dict[str, list[str]], cols: list[str]) -> dict[str, list[str]]:
     """Select a subset of columns."""
