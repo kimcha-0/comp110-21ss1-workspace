@@ -45,10 +45,3 @@ def select(table: dict[str, list[str]], cols: list[str]) -> dict[str, list[str]]
     for col_name in cols:
         result[col_name] = table[col_name]
     return result
-
-
-table = read_csv_rows("data/weather.csv")
-dates = column_values(table, "date")
-print(dates)
-column_oriented = columnar(table)
-print(column_oriented)
