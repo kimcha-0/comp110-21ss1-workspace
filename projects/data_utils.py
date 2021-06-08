@@ -1,12 +1,8 @@
-"""Data utility functions."""
-
-__author__ = "730407570"
+"""Data utility function."""
 
 from csv import DictReader
 
-# TODO 0: Paste the functions we've been working on in class, here.
-
-
+# Row oriented
 def read_csv_rows(path: str) -> list[dict[str, str]]:
     """Read a CSV file and return a list of its rows."""
     file_handle = open(path, encoding="utf8")
@@ -24,9 +20,7 @@ def column_values(table: list[dict[str, str]], column: str) -> list[str]:
         values.append(row[column])
     return values
 
-
 # Let's convert our data to column-oriented
-
 
 def columnar(table: list[dict[str, str]]) -> dict[str, list[str]]:
     """Convert a table of rows to a table of columns."""
@@ -45,7 +39,6 @@ def head(table: dict[str, list[str]], rows: int) -> dict[str, list[str]]:
         result[key] = table[key][:rows]
     return result
 
-
 def select(table: dict[str, list[str]], cols: list[str]) -> dict[str, list[str]]:
     """Select a subset of columns."""
     result: dict[str, list[str]] = {}
@@ -53,8 +46,6 @@ def select(table: dict[str, list[str]], cols: list[str]) -> dict[str, list[str]]
         result[col_name] = table[col_name]
     return result
 
-
-# TODO 1: Define the count function, and its logic, here.
 def count(x: list[str]) -> dict[str, int]:
     """Counts the frequency of the elements in a list and returns them to a dictionary."""
     result: dict[str, int] = {}
