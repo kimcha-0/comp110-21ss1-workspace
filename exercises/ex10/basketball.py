@@ -12,12 +12,6 @@ class BBallGame:
     losing_team: str
     def __init__(self, biscuits: bool, points: int, winning_team: str, losing_team: str):
         self.biscuits = False
-    def check_points(self) -> None:
-        return None
-    def winner(self) -> str:
-        return 
-    def reset_points(self) -> int:
-        return 
 
 
 
