@@ -1,6 +1,6 @@
 """A class to model a basketball game."""
 
-__author__ = "YOUR 9-DIGIT PID"
+__author__ = "730407570"
 
 
 # TODO 1: Define the BBallGame class, and its logic, here.
