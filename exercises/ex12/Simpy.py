@@ -89,5 +89,3 @@ class Simpy:
                 new_values.append(self.values[i] % rhs.values[i])
             return Simpy(new_values)
     
-    def __eq__(self, rhs: Union[float, Simpy]) -> list[bool]:
-        
