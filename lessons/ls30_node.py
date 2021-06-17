@@ -59,6 +59,16 @@ def count(a_node: Optional[Node]) -> int:
         return 0
     else:
         return 1 + count(a_node.next)
+
+
+def __eq__(self, rhs: Optional[Node]) -> bool:
+    # both lists None at the same time
+    if self is None and rhs is None:
+        return True
+    elif self is None or rhs is None or self.data != rhs.data:
+        return False
+    else:
+        return self.next == rhs.next
 # a: Node = Node(10, None)
 # print(a)
 # b: Node = Node(20, a)
