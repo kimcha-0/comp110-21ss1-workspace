@@ -21,6 +21,38 @@ class Node:
             return f"{self.data} -> {self.next}"
 
 
+def min(head: Optional[Node]) -> Optional[int]:
+    """Return the smallest value in a linked list."""
+    # base case
+    if head is None:
+        return None
+    else:
+        # find the min of the rest of the list
+        min_rest = min(head.next)
+        if min_rest is None:
+            return head.data
+        # compare the min of the rest of the list to our current data
+        else:   
+            if head.data < min_rest:
+                return head.data
+        # return the smaller of the two
+            else:
+                return min_rest
+    return None
+
+
+
+def includes(head: Optional[Node], needle: int) -> bool:
+    """Searching for a given value in a linked list."""
+    if head is None:
+        return False
+    elif head.data == needle:
+        return True
+    else:
+        return includes(head.next, needle)
+    return False
+
+
 def count(a_node: Optional[Node]) -> int:
     """Counting up the elements of a linked list."""
     if a_node is None:
