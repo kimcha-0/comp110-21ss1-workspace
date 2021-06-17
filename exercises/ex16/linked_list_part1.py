@@ -3,7 +3,7 @@
 from __future__ import annotations
 from typing import Optional
 
-__author__ = "YOUR PID HERE"
+__author__ = "730407570"
 
 class Node:
     """A single link in a linked list."""
